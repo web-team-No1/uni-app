@@ -1,0 +1,17 @@
+.typeQueryNav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: calc(100% - 20rpx);
+		height: 35rpx;
+		padding: 0 10rpx;
+		.typeQueryBack {
+			display: flex;
+			align-items: center;
+			line-height: 35rpx;
+			.typeQueryTitle {
+				font-size: 14px;
+				color: #434343;
+			}
+		}
+	}

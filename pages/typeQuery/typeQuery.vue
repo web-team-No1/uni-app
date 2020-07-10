@@ -1,9 +1,11 @@
 <template>
 	<!-- 待接待 -->
 	<view>
+		<!-- 头部隐藏默认nav -->
 		<view class="status_bar">
 			<view class="top_view"></view>
 		</view>
+		<!-- nav -->
 		<view class="typeQueryNav">
 			<view class="typeQueryBack">
 				<uni-icons @click="iconBack" class="backIcon" type="back" size="22"></uni-icons>
@@ -13,24 +15,40 @@
 				<input type="text" value="" placeholder="请输入客户姓名/联系电话" />
 				<uni-icons @click="iconBack" class="backIcon" type="search" size="22"></uni-icons>
 			</view>
-
 		</view>
-		<ttable :items="items" :datas="datas" :widthtr="widthtr"></ttable>
-
+		<!-- 表格 -->
+		<view class="tbTh">
+			<view style="width: 10%;" class="tbThclass">序号</view>
+			<view style="width: 10%;" class="tbThclass">客户姓名</view>
+			<view style="width: 10%;" class="tbThclass">性别</view>
+			<view style="width: 10%;" class="tbThclass">出生日期</view>
+			<view style="width: 10%;" class="tbThclass">服务人员</view>
+			<view style="width: 10%;" class="tbThclass">分配时间</view>
+			<view style="width: 10%;" class="tbThclass">是否会员</view>
+			<view style="width: 10%;" class="tbThclass">操作</view>
+		</view>
+		<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
+			<view style="width: 10%;" name="序号" class="tbTdclass">{{j.id}}</view>
+			<view style="width: 10%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
+			<view style="width: 10%;" name="性别" class="tbTdclass">{{j.sex}}</view>
+			<view style="width: 10%;" name="出生日期" class="tbTdclass">{{j.age}}</view>
+			<view style="width: 10%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+			<view style="width: 10%;" name="分配时间" class="tbTdclass">{{j.waiter}}</view>
+			<view style="width: 10%;" name="是否会员" class="tbTdclass">{{j.creattime}}</view>
+			<view style="width: 10%;" name="操作" class="tbTdclass">
+				<button type="default" @click="typeQueryReception" size="mini">接待</button>
+			</view>
+		</view>
 	</view>
 </template>
-
 <script>
-	import ttable from "../../components/tables/tables.vue"
 	import uniIcons from "@/components/uni-icons/uni-icons.vue"
 	export default {
 		components: {
-			uniIcons,
-			ttable
+			uniIcons
 		},
 		data() {
 			return {
-				widthtr:10,
 				title: '',
 				datas: [{
 						id: 1,
@@ -50,47 +68,29 @@
 						waiter: "小王",
 						creattime: "2018-5-05"
 					}
-				],
-				items: [{
-						key: "序号"
-					},
-					{
-						key: "客户姓名"
-					},
-					{
-						key: "性别"
-					},
-					{
-						key: "出生日期"
-					},
-					{
-						key: "服务人员"
-					},
-					{
-						key: "分配时间"
-					},
-					{
-						key: "是否会员"
-					},
-					{
-						key: "操作"
-					},
 				]
 			};
 		},
 		methods: {
+			// 返回按钮
 			iconBack() {
 				uni.navigateBack({
 					delta: 1
 				})
+			},
+			typeQueryReception() {
+				uni.navigateTo({
+					url: "../typeQuery/typeQueryReception/typeQueryReception"
+				})
 			}
 		},
-		onLoad(option) {
-		}
+		onLoad(option) {}
 	}
 </script>
 
 <style lang="scss" scoped>
+	@import "../../common/typeTable.scss";
+
 	.typeQueryNav {
 		position: relative;
 		display: flex;
@@ -100,13 +100,12 @@
 		padding: 0 10rpx;
 
 		.typeQueryBack {
-
 			display: flex;
 			align-items: center;
 			line-height: 35rpx;
 
 			.typeQueryTitle {
-				font-size: 14px;
+				font-size: 10rpx;
 				color: #434343;
 			}
 		}
@@ -130,6 +129,5 @@
 				background-color: #ECECEC;
 			}
 		}
-
 	}
 </style>

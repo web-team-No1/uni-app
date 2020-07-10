@@ -23,28 +23,37 @@
 			"style": {
 				"navigationStyle": "custom"
 			}
+		}, {
+			"path": "pages/acceptance/acceptance",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/approved/approved",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/statistics/statistics",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/typeQuery/typeQueryReception/typeQueryReception",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/typeQuery/typeMeasure/typeMeasure",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		}
 	    ,{
-            "path" : "pages/acceptance/acceptance",
-           "style": {
-           	"navigationStyle": "custom"
-           }
-        }
-        ,{
-            "path" : "pages/approved/approved",
+            "path" : "pages/receptionEnd/typeDetails/typeDetails",
             "style": {
             	"navigationStyle": "custom"
             }
-        }
-        ,{
-            "path" : "pages/statistics/statistics",
-            "style": {
-            	"navigationStyle": "custom"
-            }
-        }
-        ,{
-            "path" : "pages/typeQuery/typeQueryReception/typeQueryReception",
-            "style" : {}
         }
     ],
 	"globalStyle": {

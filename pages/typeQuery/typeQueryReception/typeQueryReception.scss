@@ -1,0 +1,115 @@
+// 用户基本信息
+.information{
+		display: flex;
+		width: 96%;
+		margin: 0 2%;
+		border-radius: 10rpx;
+		height: 90rpx;
+		margin-top: 10rpx;
+		background-color: #91B853;
+		.informationPic{
+			display: flex;
+			width: 10%;
+			height: 90rpx;
+			justify-content: center;
+			align-items: center;
+			image{
+				width: 37.7rpx;
+			}
+		}
+		.informationText{
+			display: flex;
+			width: 90%;
+			height: 90rpx;
+			font-size: 10rpx;
+			color: #fff;
+			.userText{
+				display: flex;
+				width: 20%;
+				height: 90rpx;
+				.userTextLeft{
+					width: 50%;
+					view{
+						height: 30rpx;
+						line-height: 30rpx;
+					}
+				}
+				.userTextRight{
+					view{
+						height: 30rpx;
+						line-height: 30rpx;
+					}
+				}
+				.userTextLeftwidth{
+					width: 35%;
+				}
+			}
+			.userwidth{
+				width: 30%;
+			}
+			.userConnection{
+				width: 35%;
+				height: 90rpx;
+				background-color: green;
+			}
+			.userSource{
+				width: 25%;
+				height: 90rpx;
+				background-color: red;
+			}
+			.userType{
+				width: 20%;
+				height: 90rpx;
+				background-color: green;
+			}
+		}
+	}
+	// 会员信息表格
+	.productInformation,
+	.diseaseInformation,
+	.vipInformation{
+		width: 96%;
+		margin: 0 2%;
+		border-radius: 10rpx;
+		height: 60rpx;
+		background-color: #F5F5F5;
+		margin-top: 10rpx;
+		.tbTh {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			height: 30rpx;
+			border-bottom: 1px solid #ccc;
+			font-size: 10rpx;
+			line-height: 30rpx;
+			.tbThclass {
+				text-align: center;
+			}
+		}
+		.tbTd {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			height: 30rpx;
+			border-bottom: 1px solid #ccc;
+			font-size: 10rpx;
+			line-height: 30rpx;
+			.tbTdclass {
+				text-align: center;
+				button {
+					background-color: #A3CB64;
+					margin-top: 5rpx;
+					color: #fff;
+					border-radius: 15rpx;
+				}
+				::after {
+					border: none;
+				}
+			}
+		}
+		.notbTd {
+			border: none;
+		}
+	}
+	
+		

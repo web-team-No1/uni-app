@@ -28,6 +28,10 @@
 	    top: 0;  
 	    z-index: 999;  
 	} 
+	text {
+		font-size: 10rpx;
+		
+	}
 	page {
 	background-color: #FFFFFF;
 	}

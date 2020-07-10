@@ -1,0 +1,39 @@
+	.tbTh {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 10rpx;
+		width: calc(100% - 20rpx);
+		height: 30rpx;
+		border-bottom: 1px solid #ccc;
+		font-size: 10rpx;
+		line-height: 30rpx;
+		.tbThclass {
+			text-align: center;
+		}
+	}
+	.tbTd {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 10rpx;
+		width: calc(100% - 20rpx);
+		min-height: 30rpx;
+		max-height: 60rpx;
+		border-bottom: 1px solid #ccc;
+		font-size: 10rpx;
+		line-height: 30rpx;
+		.tbTdclass {
+			text-align: center;
+			button {
+				background-color: #A3CB64;
+				margin-top: 5rpx;
+				color: #fff;
+				border-radius: 15rpx;
+			}
+			::after {
+				border: none;
+			}
+		}
+	}
+	.notbTd {
+		border: none;
+	}

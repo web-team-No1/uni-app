@@ -8,11 +8,11 @@
 		<view class="typeQueryNav">
 			<view class="typeQueryBack">
 				<uni-icons @click="iconBack" class="backIcon" type="back" size="22"></uni-icons>
-				<text class="typeQueryTitle">取型详情</text>
+				<text class="typeQueryTitle">取型已验收详情</text>
 			</view>
 			<view class="filtration">
-				<text class="detailesxg" @click="detailesxgClick">修改</text>
-				<text class="typeQueryTitle">模型自检</text>
+			
+				<text class="typeQueryTitle">重取</text>
 			</view>
 		</view>
 		<!-- 用户基本信息 -->
@@ -276,11 +276,6 @@
 		.filtration {
 			position: absolute;
 			right: 10rpx;
-			.detailesxg{
-				border-right: 1rpx solid #ccc;
-				padding-right: 10rpx;
-				margin-right: 10rpx;
-				}
 		}
 	}
 </style>

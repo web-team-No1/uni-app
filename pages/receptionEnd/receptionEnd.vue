@@ -11,7 +11,12 @@
 				<uni-icons @click="iconBack" class="backIcon" type="back" size="22"></uni-icons>
 				<text class="typeQueryTitle">取型已接待</text>
 			</view>
+			<view @click="filtrationClick" class="filtration">
+				<text class="iconfont iconshaixuan"></text>
+				<text class="typeQueryTitle">筛选</text>
+			</view>
 		</view>
+
 		<!-- 表格 -->
 		<view class="tbTh">
 			<view style="width: 5%;" class="tbThclass">序号</view>
@@ -50,33 +55,38 @@
 		data() {
 			return {
 				title: '',
-				datas: [
-					{
+				datas: [{
 						id: 1,
 						name: "小李",
 						phone: 18991807988,
-						sex:"女",
+						sex: "女",
 						productName: "包膝式踝足矫形器(动踝)",
 						typePerson: "莎莎",
 						typeTime: "2018-05-05 12:40:03",
 						state: "待验收",
-						patriarchRe:"心疼"
+						patriarchRe: "心疼"
 					},
 					{
 						id: 1,
 						name: "小李",
 						phone: 18991807988,
-						sex:"女",
+						sex: "女",
 						productName: "包膝式踝足矫形器(动踝)",
 						typePerson: "莎莎",
 						typeTime: "2018-05-05 12:40:03",
 						state: "待验收",
-						patriarchRe:"心疼"
+						patriarchRe: "心疼"
 					}
 				]
 			};
 		},
 		methods: {
+			// 筛选按钮
+			filtrationClick() {
+				uni.navigateTo({
+					url: "../receptionEnd/fiftration/fiftration"
+				})
+			},
 			// 返回按钮
 			iconBack() {
 				uni.navigateBack({
@@ -106,31 +116,14 @@
 			display: flex;
 			align-items: center;
 			line-height: 35rpx;
-
 			.typeQueryTitle {
 				font-size: 10rpx;
 				color: #434343;
 			}
 		}
-
-		.typeQuerySearch {
+		.filtration {
 			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			display: flex;
-			align-items: center;
-			width: 400rpx;
-			height: 35rpx;
-
-			input {
-				text-align: center;
-				padding: 0 20rpx;
-				border-radius: 15rpx;
-				width: 80%;
-				margin-right: 20rpx;
-				height: 30rpx;
-				background-color: #ECECEC;
-			}
+			right: 10rpx;
 		}
 	}
 </style>

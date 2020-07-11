@@ -30,6 +30,7 @@
 				this.psdActive = !this.psdActive
 			},
 			loginClick() {
+				
 				uni.redirectTo({
 					url: "../takeType/takeType",
 				

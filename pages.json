@@ -55,6 +55,61 @@
             	"navigationStyle": "custom"
             }
         }
+        ,{
+            "path" : "pages/receptionEnd/fiftration/fiftration",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/receptionEnd/detailsAmend/detailsAmend",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/approved/approvedParticulars/approvedParticulars",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/statistics/statisticFilter/statisticFilter",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/trywaitcheck/trywaitcheck",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/trywaitcheck/trywaitdetial/trywaitdetial",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/trywaited/trywaited",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        
+        ,{
+            "path" : "pages/serviced/serviced",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/serviced/serviceddetails/serviceddetails",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

@@ -15,6 +15,7 @@
 </script>
 
 <style>
+	@import url("./static/fonts/iconfont.css");
 	.status_bar {
 	    height: var(--status-bar-height);  
 	    width: 100%;  
@@ -29,11 +30,11 @@
 	    z-index: 999;  
 	} 
 	text {
-		font-size: 10rpx;
-		
+		font-size: 10rpx;	
 	}
 	page {
-	background-color: #FFFFFF;
+	font-size: 10rpx;
+	background-color: #F7F7F7;
 	}
 	/*每个页面公共css */
 </style>

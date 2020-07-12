@@ -36,31 +36,31 @@
 						id: 3,
 						title: "待通知",
 						picUrl: "../../static/tryon/img_daitongzhi_shichuan.png",
-						urlSkip: "../acceptance/acceptance"
+						urlSkip: "../tryinform/tryinform"
 					},
 					{
 						id: 4,
 						title: "待试穿",
 						picUrl: "../../static/tryon/img_daishichuan_shichuan.png",
-						urlSkip: "../approved/approved"
+						urlSkip: "../tryonwait/tryonwait"
 					},
 					{
 						id: 5,
 						title: "已试穿",
 						picUrl: "../../static/tryon/img_yishichuan.png",
-						urlSkip: "../statistics/statistics"
+						urlSkip: "../tryoned/tryoned"
 					},
 					{
 						id: 6,
 						title: "待报修",
 						picUrl: "../../static/tryon/img_daibaoxiu_weixiu.png",
-						urlSkip: "../statistics/statistics"
+						urlSkip: "../readyService/readyService"
 					},
 					{
 						id: 7,
 						title: "待维修",
 						picUrl: "../../static/tryon/img_daiweixiu_weixiu.png",
-						urlSkip: "../statistics/statistics"
+						urlSkip: "../tryrepairwait/tryrepairwait"
 					},
 					{
 						id: 8,

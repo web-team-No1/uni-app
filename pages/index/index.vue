@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		
+
 		<image class="logoPic" src="../../static/login/logoPic2.png" mode="widthFix"></image>
 		<image class="logoWord" src="../../static/login/logoWord.png" mode="widthFix"></image>
 		<form @submit="" @reset="">
@@ -30,17 +30,17 @@
 				this.psdActive = !this.psdActive
 			},
 			loginClick() {
-				
+
 				uni.redirectTo({
 					url: "../takeType/takeType",
-				
+
 				});
 			}
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		position: relative;
 	}
@@ -69,38 +69,43 @@
 		width: 270rpx;
 		display: flex;
 
+		input {
+			width: 236rpx;
+			padding: 0 17rpx;
+			height: 30rpx;
+			font-size: 10rpx;
+			line-height: 30rpx;
+			background: #ECECEC;
+			border-radius: 15rpx;
+			margin-top: 10rpx;
+		}
+
+		.loginBtn {
+			width: 270rpx;
+			height: 30rpx;
+			border-radius: 15rpx;
+			font-size: 10rpx;
+			margin-top: 10rpx;
+			color: #fff;
+			line-height: 30rpx;
+			background-color: #A3CB64;
+			box-shadow: 0rpx 2rpx 3rpx 1rpx #ccc;
+			transition: all .2s ease;
+		}
 	}
 
-	form input {
-		width: 236rpx;
-		padding: 0 17rpx;
-		height: 30rpx;
-		background: #ECECEC;
-		border-radius: 15rpx;
-		margin-top: 10rpx;
-	}
 
-	form .loginBtn {
-		width: 270rpx;
-		height: 30rpx;
-		border-radius: 15rpx;
-		margin-top: 10rpx;
-		color: #fff;
-		line-height: 30rpx;
-		background-color: #A3CB64;
-		box-shadow: 0px 2px 3px 1px #ccc;
-		transition: all .2s ease;
-	}
 
 	form .loginBtnActive {
 		width: 270rpx;
 		height: 30rpx;
 		border-radius: 15rpx;
+		font-size: 10rpx;
 		margin-top: 10rpx;
 		color: #fff;
 		line-height: 30rpx;
 		background-color: #A3CB64;
-		box-shadow: 0px 5px 5px 1px #ccc;
+		box-shadow: 0rpx 5rpx 5rpx 1rpx #ccc;
 	}
 
 	button::after {

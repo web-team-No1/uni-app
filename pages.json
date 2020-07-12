@@ -110,6 +110,70 @@
 				"navigationStyle": "custom"
 			}
         }
+        ,{
+            "path" : "pages/serviced/serviceddetails/servicepic/servicepic",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/acceptance/acceptancecheck",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryinform/tryinform",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryonwait/tryonwait",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryonwait/trwdetial",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryonwait/uploadPic",
+             "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryoned/tryoned",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryoned/tryondetial",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryoned/tryonPic",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/readyService/readyService",
+             "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/readyService/redServicedetial",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/readyService/readySerain/reform",
+             "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/readyService/readySerain/scenerepair",
+             "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/readyService/readySerain/gobackrepair",
+             "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/readyService/readySerain/dontrepair",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/tryrepairwait/tryrepairwait",
+            "style" : {"navigationStyle": "custom"}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

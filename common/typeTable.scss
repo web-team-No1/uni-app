@@ -8,6 +8,9 @@
 		font-size: 10rpx;
 		line-height: 30rpx;
 		.tbThclass {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 			text-align: center;
 		}
 	}
@@ -16,22 +19,37 @@
 		justify-content: space-between;
 		padding: 0 10rpx;
 		width: calc(100% - 20rpx);
-		min-height: 30rpx;
-		max-height: 60rpx;
+		height: 30rpx;
+		line-height: 30rpx;
+		align-items: center;
 		border-bottom: 1px solid #ccc;
 		font-size: 10rpx;
-		line-height: 30rpx;
+		
 		.tbTdclass {
+			height: 30rpx;
+			line-height: 30rpx;
 			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 			button {
 				background-color: #A3CB64;
 				margin-top: 5rpx;
 				color: #fff;
-				border-radius: 15rpx;
+				width: 50rpx;
+				height: 20rpx;
+				line-height: 20rpx;
+				text-align: center;
+				font-size: 8rpx;
+				border-radius: 10rpx;
 			}
 			::after {
 				border: none;
+				text-align: center;
 			}
+		}
+		.tbTd:last-child{
+			display: flex;
 		}
 	}
 	.notbTd {

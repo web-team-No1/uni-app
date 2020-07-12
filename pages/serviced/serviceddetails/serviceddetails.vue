@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!-- 已维修详情 -->
 		<!-- 头部隐藏默认nav -->
 		<view class="status_bar">
 			<view class="top_view"></view>
@@ -8,11 +9,7 @@
 		<view class="typeQueryNav">
 			<view class="typeQueryBack">
 				<uni-icons @click="iconBack" class="backIcon" type="back" size="22"></uni-icons>
-				<text class="typeQueryTitle">取型详情</text>
-			</view>
-			<view class="filtration">
-				<text class="detailesxg" @click="detailesxgClick">修改</text>
-				<text class="typeQueryTitle">模型自检</text>
+				<text class="typeQueryTitle">已维修详情</text>
 			</view>
 		</view>
 		<!-- 用户基本信息 -->
@@ -77,7 +74,7 @@
 				<view style="width: 20%;" class="tbThclass">会员剩余时间</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 20%;" name="序号"  class="tbTdclass">{{j.id}}</view>
+				<view style="width: 20%;" name="序号" class="tbTdclass">{{j.id}}</view>
 				<view style="width: 20%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
 				<view style="width: 20%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
 				<view style="width: 20%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
@@ -101,11 +98,11 @@
 				<view style="width: 14%;" name="性别" class="tbTdclass">{{j.sex}}</view>
 				<view style="width: 14%;" name="出生日期" class="tbTdclass">{{j.age}}</view>
 				<view style="width: 14%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
-				<view style="width: 14%;color: #007AFF;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+				<view style="width: 14%;color: #007AFF;" @click="visableClick" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
 				<view style="width: 14%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
 			</view>
 		</view>
-		
+
 		<!-- 产品名称表格 -->
 		<view class="productInformation">
 			<view class="tbTh">
@@ -130,40 +127,56 @@
 				<view style="width: 10%;" class="tbThclass">试穿时长</view>
 				<view style="width: 10%;" class="tbThclass">试穿评价</view>
 				<view style="width: 10%;" class="tbThclass">试穿人员</view>
-				<view style="width: 10%;" class="tbThclass">试穿照片</view>
-				<view style="width: 10%;" class="tbThclass">操作</view>
+				<view style="width: 20%;" class="tbThclass">操作</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
 				<view style="width: 10%;" name="序号" class="tbTdclass">{{j.id}}</view>
 				<view style="width: 10%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
 				<view style="width: 10%;color: #007AFF;" @click="cfDilog" name="试穿评价" class="tbTdclass">{{j.sex}}</view>
 				<view style="width: 10%;" name="性别" class="tbTdclass"></view>
-				<view style="width: 10%;" name="性别" class="tbTdclass"></view>
-				<view style="width: 10%;" name="性别" class="tbTdclass">
-					
+				<view style="width: 20%;" name="性别" class="tbTdclass">
+					<button type="default" @click="openServicepic">查看照片</button>
 				</view>
 			</view>
 		</view>
 		<!-- 验收 -->
 		<view class="typeCheck">
 			<view class="tbTh">
-				<view style="width: 10%;" class="tbThclass">取型验收人</view>
-				<view style="width: 10%;" class="tbThclass">取型验收时间</view>
-				<view style="width: 10%;" class="tbThclass">模型状态</view>
-				<view style="width: 10%;" class="tbThclass">问题反馈</view>
-				<view style="width: 10%;" class="tbThclass"></view>
-				<view style="width: 10%;" class="tbThclass"></view>
+				<view style="width: 25%;" class="tbThclass">铆接开始时间</view>
+				<view style="width: 25%;" class="tbThclass">铆接结束时间</view>
+				<view style="width: 25%;" class="tbThclass">铆接人员</view>
+				<view style="width: 25%;" class="tbThclass">铆接时长</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 10%;" name="序号" class="tbTdclass">{{j.id}}</view>
-				<view style="width: 10%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
-				<view style="width: 10%;" name="性别" class="tbTdclass">{{j.sex}}</view>
-				<view style="width: 10%;" name="性别" class="tbTdclass"></view>
-				<view style="width: 10%;" name="性别" class="tbTdclass"></view>
-				<view style="width: 10%;" name="性别" class="tbTdclass"></view>
+				<view style="width: 25%;" name="铆接开始时间" class="tbTdclass">{{j.id}}</view>
+				<view style="width: 25%;" name="铆接结束时间" class="tbTdclass">{{j.name}}</view>
+				<view style="width: 25%;" name="铆接人员" class="tbTdclass">{{j.sex}}</view>
+				<view style="width: 25%;" name="铆接时长" class="tbTdclass"></view>
 			</view>
 		</view>
-
+		<!-- 报修时间 -->
+		<view class="typeCheck">
+			<view class="tbTh">
+				<view style="width: 20%;" class="tbThclass">报修时间</view>
+				<view style="width: 20%;" class="tbThclass">维修完成时间</view>
+				<view style="width: 10%;" class="tbThclass">报修人员</view>
+				<view style="width: 10%;" class="tbThclass">维修人员</view>
+				<view style="width: 10%;" class="tbThclass">维修方式</view>
+				<view style="width: 10%;" class="tbThclass">原因</view>
+				<view style="width: 10%;" class="tbThclass">维修时长</view>
+				<view style="width: 10%;" class="tbThclass">邮寄信息</view>
+			</view>
+			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
+				<view style="width: 20%;" name="报修时间" class="tbTdclass">{{j.id}}</view>
+				<view style="width: 20%;" name="维修完成时间" class="tbTdclass">{{j.name}}</view>
+				<view style="width: 10%;" name="报修人员" class="tbTdclass">{{j.sex}}</view>
+				<view style="width: 10%;" name="维修人员" class="tbTdclass"></view>
+				<view style="width: 10%;" name="维修方式" class="tbTdclass"></view>
+				<view style="width: 10%;color: #007AFF;" @click="cfDilog" name="原因" class="tbTdclass">查看详情</view>
+				<view style="width: 10%;" name="维修时长" class="tbTdclass"></view>
+				<view style="width: 10%;color: #007AFF;" @click="openismail" name="邮寄信息" class="tbTdclass">查看详情</view>
+			</view>
+		</view>
 		<!-- 弹出框 -->
 		<view class="dilog" v-if="visable">
 			<view class="infocheckbox">
@@ -174,21 +187,17 @@
 				<view class="viewDataSize">
 					<view class="measureSize">
 						<view class="mSize">
-							<text style="width: 30%;">足宽</text>
-							<input style="width: 60%;" type="text" placeholder="请输入">
-							<text style="width: 10%;">CM</text>
-						</view>
+							处方病情
+							<textarea value="" disabled placeholder="" />
+							</view>
 						<view class="mSize">
-							<text style="width: 30%;">足长</text>
-							<input style="width: 50%;" type="text" placeholder="请输入">
-							<text style="width: 20%;">CM</text>
+							新增病情
+							<textarea value="" disabled placeholder="" />
 						</view>
 					</view>
 				</view>
 			</view>
 		</view>
-		
-		
 		<!-- 弹出框病情 -->
 		<view class="dilog" v-if="bqvisable">
 			<view class="infocheckbox">
@@ -198,6 +207,29 @@
 				<view class="viewDataSize">
 					评价信息
 					<textarea class="textareaStyle" />
+					</view>
+			</view>
+		</view>
+		
+		
+		<!-- 弹出框 -->
+		<view class="dilog" v-if="ismail">
+			<view class="infocheckbox">
+				<view class="viewData">
+					<view class="">邮寄信息</view>
+					<button @click="closedismail" type="default">关闭</button>
+				</view>
+				<view class="viewDataSize">
+					<view class="measureSize">
+						<view class="mSize">
+							收货人
+							<textarea value="" disabled placeholder="" />
+						</view>
+						<view class="mSize">
+							收货电话
+							<textarea value="" disabled placeholder="" />
+						</view>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -209,6 +241,7 @@
 		},
 		data() {
 			return {
+				ismail:false,
 				visable: false,
 				bqvisable:false,
 				title: "取型详情",
@@ -236,7 +269,13 @@
 					delta: 1
 				})
 			},
-		
+			// 邮寄关闭
+			openismail(){
+				this.ismail = true
+			},
+			closedismail(){
+				this.ismail = false
+			},
 			visableClick() {
 				this.visable = true
 			},
@@ -251,6 +290,11 @@
 			},
 			cfDilogClose(){
 				this.bqvisable = false
+			},
+			openServicepic(){
+				uni.navigateTo({
+					url:"../../serviced/serviceddetails/servicepic/servicepic"
+				})
 			}
 		}
 	}

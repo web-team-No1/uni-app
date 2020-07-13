@@ -25,25 +25,25 @@
 						id: 1,
 						title: "待接待",
 						picUrl: "../../static/appraisalTab/img_daijiedai.png",
-						urlSkip: "../typeQuery/typeQuery"
+						urlSkip: "../testReception/testReception"
 					},
 					{
 						id: 2,
 						title: "已接待",
 						picUrl: "../../static/appraisalTab/img_yijiedai.png",
-						urlSkip: "../receptionEnd/receptionEnd"
+						urlSkip: "../testServed/testServed"
 					},
 					{
 						id: 3,
 						title: "订单",
 						picUrl: "../../static/appraisalTab/img_yibohui.png",
-						urlSkip: "../acceptance/acceptance"
+						urlSkip: "../testOrder/testOrder"
 					},
 					{
 						id: 4,
 						title: "统计",
 						picUrl: "../../static/appraisalTab/img_tongji.png",
-						urlSkip: "../approved/approved"
+						urlSkip: "../testStatistics/testStatistics"
 					}
 				]
 			};

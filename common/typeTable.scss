@@ -1,10 +1,10 @@
 	.tbTh {
 		display: flex;
 		justify-content: space-between;
-		padding: 0 10rpx;
-		width: calc(100% - 20rpx);
+		padding: 0;
+		width: 100%;
 		height: 30rpx;
-		border-bottom: 1px solid #ccc;
+		background-color: #f7f7f7;
 		font-size: 10rpx;
 		line-height: 30rpx;
 		.tbThclass {
@@ -21,8 +21,9 @@
 		width: calc(100% - 20rpx);
 		height: 30rpx;
 		line-height: 30rpx;
+		background-color: #f7f7f7;
 		align-items: center;
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid #ececec;
 		font-size: 10rpx;
 		
 		.tbTdclass {

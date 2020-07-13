@@ -19,13 +19,13 @@
 	.status_bar {
 	    height: var(--status-bar-height);  
 	    width: 100%;  
-	    background-color: #F8F8F8;  
+	    background-color: #fff;  
 	}  
 	.top_view {  
 	    height: var(--status-bar-height);  
 	    width: 100%;  
 	    position: fixed;  
-	    background-color: #F8F8F8;  
+	    background-color: #fff;  
 	    top: 0;  
 	    z-index: 999;  
 	} 

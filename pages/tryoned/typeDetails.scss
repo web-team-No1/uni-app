@@ -74,7 +74,7 @@
 		margin: 0 2%;
 		border-radius: 10rpx;
 		height: 60rpx;
-		background-color: #F5F5F5;
+		overflow: hidden;
 		margin-top: 10rpx;
 		.tbTh {
 			display: flex;
@@ -84,6 +84,7 @@
 			border-bottom: 1px solid #ccc;
 			font-size: 10rpx;
 			line-height: 30rpx;
+			background-color: $uni-color-fygray;
 			.tbThclass {
 				text-align: center;
 			}
@@ -96,6 +97,7 @@
 			border-bottom: 1px solid #ccc;
 			font-size: 10rpx;
 			line-height: 30rpx;
+			background-color: $uni-color-fygray;
 			.tbTdclass {
 				text-align: center;
 				button {

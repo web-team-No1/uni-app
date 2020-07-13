@@ -372,6 +372,7 @@
 		align-items: center;
 		width: calc(100% - 20rpx);
 		height: 35rpx;
+		background-color: #fff;
 		padding: 0 10rpx;
 		.typeQueryBack {
 			display: flex;

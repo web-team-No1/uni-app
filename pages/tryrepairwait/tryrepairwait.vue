@@ -42,9 +42,7 @@
 			<view style="width: 15%;" name="下单时间" class="tbTdclass">{{j.patriarchRe}}</view>
 			<view style="width: 20%;" name="操作" class="tbTdclass">
 				<button style="width: 47%;background-color: #007AFF;margin-right: 2rpx;" type="default" @click="typeQueryReception" size="mini">维修说明</button>
-				<button style="width: 47%;" type="default" @click="repairwan" size="mini">维修完成</button>
-				
-				
+				<button style="width: 47%;" type="default" @click="repairwan" size="mini">维修完成</button>	
 			</view>
 		</view>
 		<!-- 弹出框病情 -->
@@ -135,6 +133,7 @@
 		width: calc(100% - 20rpx);
 		height: 35rpx;
 		padding: 0 10rpx;
+		background-color: #fff;
 		.typeQueryBack {
 			display: flex;
 			align-items: center;

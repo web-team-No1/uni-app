@@ -1,6 +1,9 @@
 <template>
 	<view class="content">
-
+<!-- 头部隐藏默认nav -->
+		<view class="status_bar">
+			<view class="top_view"></view>
+		</view>
 		<image class="logoPic" src="../../static/login/logoPic2.png" mode="widthFix"></image>
 		<image class="logoWord" src="../../static/login/logoWord.png" mode="widthFix"></image>
 		<form @submit="" @reset="">

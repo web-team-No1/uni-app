@@ -231,6 +231,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		background-color: #fff;
 		width: calc(100% - 20rpx);
 		height: 35rpx;
 		padding: 0 10rpx;

@@ -74,6 +74,7 @@
 		height: 60rpx;
 		background-color: #F5F5F5;
 		margin-top: 10rpx;
+		overflow: hidden;
 		.tbTh {
 			display: flex;
 			justify-content: space-between;
@@ -81,6 +82,7 @@
 			height: 30rpx;
 			border-bottom: 1px solid #ccc;
 			font-size: 10rpx;
+			background-color: $uni-color-fygray;
 			line-height: 30rpx;
 			.tbThclass {
 				text-align: center;
@@ -93,6 +95,7 @@
 			height: 30rpx;
 			border-bottom: 1px solid #ccc;
 			font-size: 10rpx;
+			background-color: $uni-color-fygray;
 			line-height: 30rpx;
 			.tbTdclass {
 				text-align: center;

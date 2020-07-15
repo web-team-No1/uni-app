@@ -2,6 +2,11 @@ import Vue from 'vue'
 import App from './App'
 import MescrollBody from "@/components/mescroll-uni/mescroll-body.vue"
 import MescrollUni from "@/components/mescroll-uni/mescroll-uni.vue"
+import { Myrequest } from "./util/request.js"
+// import $http from '@/jszhouWei-request/requestConfig';
+// Vue.prototype.$http = $http;
+Vue.prototype.$http = Myrequest
+
 Vue.component('mescroll-body', MescrollBody)
 Vue.component('mescroll-uni', MescrollUni)
 Vue.config.productionTip = false

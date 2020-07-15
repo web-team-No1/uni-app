@@ -33,11 +33,19 @@
 				this.psdActive = !this.psdActive
 			},
 			loginClick() {
+				this.$http({
+					url:"http://localhost:8080/#/",
+					method:"get",
+					data:{}
+				}).then(res=>{
+					console.log(res)
+				}).catch(err=>{
+					console.log(err)
+				})
+				// uni.redirectTo({
+				// 	url: "../takeType/takeType",
 
-				uni.redirectTo({
-					url: "../takeType/takeType",
-
-				});
+				// });
 			}
 		}
 	}

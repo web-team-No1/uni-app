@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<!-- 订单详情 -->
+		<!-- 客户详情 -->
 		<!-- 头部隐藏默认nav -->
 		<view class="status_bar">
 			<view class="top_view"></view>
@@ -9,14 +9,14 @@
 		<view class="typeQueryNav">
 			<view class="typeQueryBack">
 				<uni-icons @click="iconBack" class="backIcon" type="back" size="22"></uni-icons>
-				<text class="typeQueryTitle">订单详情</text>
+				<text class="typeQueryTitle">客户详情</text>
 			</view>
 			<view class="filtration">
 				<text @click="iconClick" class="iconfont iconcaidan"></text>
 				<view :class="['trdeSelsct',istrdeSelsct?'openSelsct':'']">
-					<view  @click="trdownOpen" class="clickSelect">取消订单</view>
-					<view @click="isvisable" class="clickSelect">退款</view>
-					<view @click="uploadClick" class="clickSelect">补交欠款</view>
+					<view  @click="trdownOpen" class="clickSelect">黑名单详情</view>
+					<view @click="isvisable" class="clickSelect">修改客户信息</view>
+					<view @click="uploadClick" class="clickSelect">开始新测评</view>
 				</view>
 			</view>
 		</view>
@@ -72,99 +72,112 @@
 				</view>
 			</view>
 		</view>
-		<!-- 病情表格 -->
-
+		<!-- 会员表格 -->
 		<view class="vipInformation">
 			<view class="tbTh">
-				<view style="width: 14%;" class="tbThclass">病单编号</view>
-				<view style="width: 14%;" class="tbThclass">医院名称</view>
-				<view style="width: 14%;" class="tbThclass">科室</view>
-				<view style="width: 14%;" class="tbThclass">医生</view>
-				<view style="width: 14%;" class="tbThclass">病单类型</view>
-				<view style="width: 14%;" class="tbThclass">病情</view>
-				<view style="width: 14%;" class="tbThclass">创建时间</view>
+				<view style="width: 20%;" class="tbThclass">当前是否会员</view>
+				<view style="width: 20%;" class="tbThclass">部位剩余次数</view>
+				<view style="width: 20%;" class="tbThclass">全身剩余次数</view>
+				<view style="width: 20%;" class="tbThclass">是否续费会员</view>
+				<view style="width: 20%;" class="tbThclass">会员到期时间</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 14%;" name="序号" class="tbTdclass">{{j.id}}</view>
-				<view style="width: 14%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
-				<view style="width: 14%;" name="性别" class="tbTdclass">{{j.sex}}</view>
-				<view style="width: 14%;" name="出生日期" class="tbTdclass">{{j.age}}</view>
-				<view style="width: 14%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
-				<view style="width: 14%;color: #007AFF;" @click="visableClick" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
-				<view style="width: 14%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+				<view style="width: 20%;" name="序号" class="tbTdclass">{{j.id}}</view>
+				<view style="width: 20%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
+				<view style="width: 20%;" name="性别" class="tbTdclass">{{j.sex}}</view>
+				<view style="width: 20%;" name="出生日期" class="tbTdclass">{{j.age}}</view>
+				<view style="width: 20%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
 			</view>
 		</view>
-
-		<!-- 产品名称表格 -->
-		<view class="productInformation">
+		<!-- 初诊 -->
+		<view class="firstvisit">
+			<text>初诊评价</text>
+			<text>无评价</text>
+		</view>
+		<!-- 治疗周期 -->
+		<view class="vipInformation">
 			<view class="tbTh">
-				<view style="width: 14%;" class="tbThclass">订单编号</view>
-				<view style="width: 14%;" class="tbThclass">下单人员</view>
-				<view style="width: 14%;" class="tbThclass">下单日期</view>
-				<view style="width: 14%;" class="tbThclass">订单状态</view>
-				<view style="width: 14%;" class="tbThclass">下欠金额</view>
-				<view style="width: 14%;" class="tbThclass">是否加急</view>
-				<view style="width: 14%;" class="tbThclass">订单备注</view>
+				<view style="width: 50%;" class="tbThclass">治疗周期</view>
+				<view style="width: 50%;" class="tbThclass">创建时间</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 14%;" name="序号" class="tbTdclass">{{j.id}}</view>
-				<view style="width: 14%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
-				<view style="width: 14%;" name="性别" class="tbTdclass">{{j.sex}}</view>
-				<view style="width: 14%;" name="分配时间" class="tbTdclass">{{j.waiter}}</view>
-				<view style="width: 14%;" name="是否会员" class="tbTdclass">{{j.creattime}}</view>
-				<view style="width: 14%;" name="是否会员" class="tbTdclass">{{j.creattime}}</view>
-				<view style="width: 14%;" name="是否会员" class="tbTdclass">{{j.creattime}}</view>
+				<view style="width: 50%;" name="序号" class="tbTdclass">{{j.id}}</view>
+				<view style="width:	50%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
 			</view>
 		</view>
-		<!-- 自检 -->
-		<view class="typeDetePer">
+		<!-- 病情表格 -->
+		<view class="vipInformation">
 			<view class="tbTh">
-				<view style="width: 25%;" class="tbThclass">退款金额</view>
-				<view style="width: 25%;" class="tbThclass">退款人员</view>
-				<view style="width: 25%;" class="tbThclass">退款日期</view>
-				<view style="width: 25%;" class="tbThclass">退款原因</view>
+				<view style="width: 15%;" class="tbThclass">病单编号</view>
+				<view style="width: 15%;" class="tbThclass">医院名称</view>
+				<view style="width: 15%;" class="tbThclass">科室</view>
+				<view style="width: 10%;" class="tbThclass">医生</view>
+				<view style="width: 10%;" class="tbThclass">病单类型</view>
+				<view style="width: 10%;" class="tbThclass">病情</view>
+				<view style="width: 20%;" class="tbThclass">创建时间</view>
+				<view style="width: 10%;" class="tbThclass">操作</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 25%;" name="序号" class="tbTdclass">{{j.id}}</view>
-				<view style="width: 25%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
-				<view style="width: 25%;" @click="cfDilog" name="试穿评价" class="tbTdclass">{{j.sex}}</view>
-				<view style="width: 25%;" name="性别" class="tbTdclass"></view>
-				
+				<view style="width: 15%;" name="序号" class="tbTdclass">{{j.id}}</view>
+				<view style="width: 15%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
+				<view style="width: 15%;" name="性别" class="tbTdclass">{{j.sex}}</view>
+				<view style="width: 10%;" name="出生日期" class="tbTdclass">{{j.age}}</view>
+				<view style="width: 10%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+				<view style="width: 10%;color: #007AFF;" @click="visableClick" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+				<view style="width: 20%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+				<view style="width: 10%;" name="服务人员" class="tbTdclass">
+					<button @click="placeoeder" type="default">下单</button>
+				</view>
 			</view>
 		</view>
 		<!-- 验收 -->
 		<view class="typeCheck">
 			<view class="tbTh">
-				<view style="width: 25%;" class="tbThclass">折扣金额</view>
-				<view style="width: 25%;" class="tbThclass">折扣人员</view>
-				<view style="width: 25%;" class="tbThclass">折扣日期</view>
-				<view style="width: 25%;" class="tbThclass">折扣原因</view>
+				<view style="width: 10%;" class="tbThclass">测评人员</view>
+				<view style="width: 15%;" class="tbThclass">测评时间</view>
+				<view style="width: 10%;" class="tbThclass">治疗周期</view>
+				<view style="width: 10%;" class="tbThclass">测评项数</view>
+				<view style="width: 10%;" class="tbThclass">身高</view>
+				<view style="width: 10%;" class="tbThclass">体重</view>
+				<view style="width: 35%;" class="tbThclass">操作</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 25%;" name="铆接开始时间" class="tbTdclass">{{j.id}}</view>
-				<view style="width: 25%;" name="铆接结束时间" class="tbTdclass">{{j.name}}</view>
-				<view style="width: 25%;" name="铆接人员" class="tbTdclass">{{j.sex}}</view>
-				<view style="width: 25%;" name="铆接时长" class="tbTdclass"></view>
+				<view style="width: 10%;" name="铆接开始时间" class="tbTdclass">{{j.id}}</view>
+				<view style="width: 15%;" name="铆接结束时间" class="tbTdclass">{{j.name}}</view>
+				<view style="width: 10%;" name="铆接人员" class="tbTdclass">{{j.sex}}</view>
+				<view style="width: 10%;" name="铆接时长" class="tbTdclass"></view>
+				<view style="width: 10%;" name="铆接时长" class="tbTdclass"></view>
+				<view style="width: 10%;" name="铆接时长" class="tbTdclass"></view>
+				<view style="width: 35%; display: flex;" name="铆接时长" class="tbTdclass testclass">
+					<button @click="evaluatClick" style="width: 35%;" type="default">测评详情</button>
+					<button style="width: 18%;background-color: #F0AD4E;" type="default">续</button>
+					<button style="width: 18%;background-color: #007AFF;" type="default">补</button>
+					<button style="width: 18%;" type="default">转</button>
+				</view>
 			</view>
 		</view>
 		<!-- 报修时间 -->
 		<view class="typeCheck">
 			<view class="tbTh">
-				<view style="width: 20%;" class="tbThclass">产品昵称</view>
-				<view style="width: 20%;" class="tbThclass">产品分类</view>
-				<view style="width: 10%;" class="tbThclass">产品型号</view>
-				<view style="width: 10%;" class="tbThclass">产品数量</view>
-				<view style="width: 10%;" class="tbThclass">产品尺寸</view>
-				<view style="width: 10%;" class="tbThclass">标准价格</view>
-				<view style="width: 10%;" class="tbThclass">实收价格</view>
+				<view style="width: 10%;" class="tbThclass">产品昵称</view>
+				<view style="width: 10%;" class="tbThclass">产品类型</view>
+				<view style="width: 10%;" class="tbThclass">下单人员</view>
+				<view style="width: 15%;" class="tbThclass">下单日期</view>
+				<view style="width: 10%;" class="tbThclass">订单状态</view>
+				<view style="width: 10%;" class="tbThclass">下欠金额</view>
+				<view style="width: 15%;" class="tbThclass">交货日期</view>
+				<view style="width: 10%;" class="tbThclass">订单编号</view>
+				<view style="width: 10%;" class="tbThclass">操作</view>
 			</view>
 			<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-				<view style="width: 20%;" name="报修时间" class="tbTdclass">{{j.id}}</view>
-				<view style="width: 20%;" name="维修完成时间" class="tbTdclass">{{j.name}}</view>
+				<view style="width: 10%;" name="报修时间" class="tbTdclass">{{j.id}}</view>
+				<view style="width: 10%;" name="维修完成时间" class="tbTdclass">{{j.name}}</view>
 				<view style="width: 10%;" name="报修人员" class="tbTdclass">{{j.sex}}</view>
-				<view style="width: 10%;" name="维修人员" class="tbTdclass"></view>
-				<view style="width: 10%;color: #007AFF;" name="维修方式" class="tbTdclass"></view>
+				<view style="width: 15%;" name="维修人员" class="tbTdclass"></view>
+				<view style="width: 10%;" name="维修方式" class="tbTdclass"></view>
 				<view style="width: 10%;" @click="cfDilog" name="原因" class="tbTdclass">查看详情</view>
+				<view style="width: 15%;" name="维修时长" class="tbTdclass"></view>
+				<view style="width: 10%;" name="维修时长" class="tbTdclass"></view>
 				<view style="width: 10%;" name="维修时长" class="tbTdclass"></view>
 			</view>
 		</view>
@@ -252,6 +265,17 @@
 			};
 		},
 		methods: {
+			// 下单
+			placeoeder(){
+				uni.navigateTo({
+					url:"../testServed/placeorder"
+				})
+			},
+			evaluatClick(){
+				uni.navigateTo({
+					url:"../testServed/evaluatdetial"
+				})
+			},
 			// 铆接人
 			patriarChange(e) {
 				console.log(e)
@@ -291,10 +315,10 @@
 					url:"../readyService/readySerain/dontrepair"
 				})
 			},
-			// 返厂报修
+			// 开启新测评
 			uploadClick(){
 				uni.navigateTo({
-					url:"../readyService/readySerain/gobackrepair"
+					url:"../testServed/Selectest/Selectest"
 				})
 			}	,
 			// 修改
@@ -317,10 +341,10 @@
 			visableClick() {
 				this.visable = true
 			},
-			// 重做
+			// 黑名单详情
 			trdownOpen(){
 				uni.navigateTo({
-					url:"../readyService/readySerain/reform"
+					url:"../testServed/blacklist"
 				})
 			},
 			// 现场报修
@@ -343,7 +367,7 @@
 				this.bqvisable = false
 			},
 		}
-	} 
+	}
 </script>
 <style lang="scss" scoped>
 	@import "./typeDetails.scss";

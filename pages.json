@@ -198,6 +198,42 @@
             "path" : "pages/testOrder/refund",
             "style" : {"navigationStyle": "custom"}
         }
+        ,{
+            "path" : "pages/testServed/Serveditail",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/evaluatdetial",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/blacklist",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/placeorder",
+             "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/addproduct",
+           "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/Selectest/Selectest",
+           "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/Selectest/testStart",
+            "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/Selectest/finishtest",
+           "style" : {"navigationStyle": "custom"}
+        }
+        ,{
+            "path" : "pages/testServed/Selectest/testfinish",
+            "style" : {"navigationStyle": "custom"}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

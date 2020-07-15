@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "593514",
+      "name": "圆",
+      "font_class": "weibiaoti38",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "609744",
+      "name": "圆",
+      "font_class": "yuancircle46",
+      "unicode": "e75d",
+      "unicode_decimal": 59229
+    },
+    {
+      "icon_id": "8180208",
+      "name": "错误",
+      "font_class": "cuowu1",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "7151395",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "15920778",
+      "name": "错误",
+      "font_class": "cuowured-copy",
+      "unicode": "e81c",
+      "unicode_decimal": 59420
+    },
+    {
       "icon_id": "5743183",
       "name": "完成",
       "font_class": "wancheng",
@@ -32,6 +67,13 @@
       "font_class": "xianshi_xuanzetianchong",
       "unicode": "e626",
       "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "15920796",
+      "name": "选择",
+      "font_class": "xianshi_xuanzetianchong-copy",
+      "unicode": "e81d",
+      "unicode_decimal": 59421
     },
     {
       "icon_id": "1351",

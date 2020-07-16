@@ -1,5 +1,5 @@
 <template>
-	<!-- 已接待 -->
+	<!-- 测评已接待 -->
 	<view>
 		<!-- 头部隐藏默认nav -->
 		<view class="status_bar">
@@ -9,37 +9,34 @@
 		<view class="typeQueryNav">
 			<view class="typeQueryBack">
 				<uni-icons @click="iconBack" class="backIcon" type="back" size="22"></uni-icons>
-				<text class="typeQueryTitle">已接待</text>
+				<text class="typeQueryTitle">测评已接待</text>
 			</view>
-			<view @click="filtrationClick" class="filtration">
-				<text class="iconfont iconshaixuan"></text>
-				<text class="typeQueryTitle">筛选</text>
+			<view class="typeQuerySearch">
+				<input type="text" value="" placeholder="请输入客户姓名/联系电话" />
+				<uni-icons @click="iconBack" class="backIcon" type="search" size="22"></uni-icons>
 			</view>
 		</view>
-
 		<!-- 表格 -->
 		<view class="tbTh">
-			<view style="width: 5%;" class="tbThclass">序号</view>
+			<view style="width: 10%;" class="tbThclass">序号</view>
 			<view style="width: 10%;" class="tbThclass">客户姓名</view>
-			<view style="width: 15%;" class="tbThclass">联系电话</view>
 			<view style="width: 10%;" class="tbThclass">性别</view>
-			<view style="width: 15%;" class="tbThclass">分配时间</view>
+			<view style="width: 10%;" class="tbThclass">出生日期</view>
 			<view style="width: 10%;" class="tbThclass">服务人员</view>
-			<view style="width: 15%;" class="tbThclass">接待时长</view>
+			<view style="width: 10%;" class="tbThclass">分配时间</view>
 			<view style="width: 10%;" class="tbThclass">是否会员</view>
 			<view style="width: 10%;" class="tbThclass">操作</view>
 		</view>
 		<view v-for="(j,index) in datas" :key="index" :class="['tbTd',index==datas.length - 1? 'notbTd':'']">
-			<view style="width: 5%;" name="序号" class="tbTdclass">{{j.id}}</view>
+			<view style="width: 10%;" name="序号" class="tbTdclass">{{j.id}}</view>
 			<view style="width: 10%;" name="客户姓名" class="tbTdclass">{{j.name}}</view>
-			<view style="width: 15%;" name="联系电话" class="tbTdclass">{{j.phone}}</view>
-			<view style="width: 10%;" name="产品昵称" class="tbTdclass">{{j.productName}}</view>
-			<view style="width: 15%;" name="主取型人" class="tbTdclass">{{j.typePerson}}</view>
-			<view style="width: 10;" name="取型时间" class="tbTdclass">{{j.typeTime}}</view>
-			<view style="width: 15%;" name="性别" class="tbTdclass">{{j.sex}}</view>
-			<view style="width: 10%;" name="模型状态" class="tbTdclass">{{j.state}}</view>
+			<view style="width: 10%;" name="性别" class="tbTdclass">{{j.sex}}</view>
+			<view style="width: 10%;" name="出生日期" class="tbTdclass">{{j.age}}</view>
+			<view style="width: 10%;" name="服务人员" class="tbTdclass">{{j.birthtime}}</view>
+			<view style="width: 10%;" name="分配时间" class="tbTdclass">{{j.waiter}}</view>
+			<view style="width: 10%;" name="是否会员" class="tbTdclass">{{j.creattime}}</view>
 			<view style="width: 10%;" name="操作" class="tbTdclass">
-				<button type="default" @click="typeQueryReception" size="mini">详情</button>
+				<button type="default" @click="typeQueryReception" size="mini">接待</button>
 			</view>
 		</view>
 	</view>
@@ -56,35 +53,25 @@
 				datas: [{
 						id: 1,
 						name: "小李",
-						phone: 18991807988,
-						sex: "女",
-						productName: "asd11111111111",
-						typePerson: "莎莎",
-						typeTime: "2018-05-05 12:40:03",
-						state: "待验收",
-						patriarchRe: "心疼"
+						sex: "男",
+						age: 20,
+						birthtime: "2015-07-12",
+						waiter: "小王",
+						creattime: "2018-5-05"
 					},
 					{
 						id: 1,
 						name: "小李",
-						phone: 18991807988,
-						sex: "女",
-						productName: "包膝式踝足矫形器(动踝)",
-						typePerson: "莎莎",
-						typeTime: "2018-05-05 12:40:03",
-						state: "待验收",
-						patriarchRe: "心疼"
+						sex: "男",
+						age: 20,
+						birthtime: "2015-07-12",
+						waiter: "小王",
+						creattime: "2018-5-05"
 					}
 				]
 			};
 		},
 		methods: {
-			// 筛选按钮
-			filtrationClick() {
-				uni.navigateTo({
-					url: "../receptionEnd/fiftration/fiftration"
-				})
-			},
 			// 返回按钮
 			iconBack() {
 				uni.navigateBack({
@@ -93,7 +80,7 @@
 			},
 			typeQueryReception() {
 				uni.navigateTo({
-					url: "../testServed/Serveditail"
+					url: "../typeQuery/typeQueryReception/typeQueryReception"
 				})
 			}
 		},
@@ -103,26 +90,44 @@
 
 <style lang="scss" scoped>
 	@import "../../common/typeTable.scss";
+
 	.typeQueryNav {
 		position: relative;
 		display: flex;
-		background-color: #fff;
 		align-items: center;
 		width: calc(100% - 20rpx);
 		height: 35rpx;
 		padding: 0 10rpx;
+background-color: #fff;
 		.typeQueryBack {
 			display: flex;
 			align-items: center;
 			line-height: 35rpx;
+
 			.typeQueryTitle {
 				font-size: 10rpx;
 				color: #434343;
 			}
 		}
-		.filtration {
+
+		.typeQuerySearch {
 			position: absolute;
-			right: 10rpx;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			align-items: center;
+			width: 400rpx;
+			height: 35rpx;
+
+			input {
+				text-align: center;
+				padding: 0 20rpx;
+				border-radius: 15rpx;
+				width: 80%;
+				margin-right: 20rpx;
+				height: 30rpx;
+				background-color: #ECECEC;
+			}
 		}
 	}
 </style>

@@ -343,7 +343,7 @@
 				this.bqvisable = false
 			},
 		}
-	} 
+	}
 </script>
 <style lang="scss" scoped>
 	@import "./typeDetails.scss";
